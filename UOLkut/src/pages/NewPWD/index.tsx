@@ -6,7 +6,7 @@ import LogoSVG from "../../assets/svg/logo.svg";// Importe o arquivo SVG aqui
 import { useNavigate } from "react-router-dom";
 import styles from '../Login/styles.module.css'
 
-const RegisterPage: React.FC = () => {
+const RecoverPWDPage: React.FC = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
@@ -114,4 +114,4 @@ const RegisterPage: React.FC = () => {
   };
   
 
-export default RegisterPage;   
+export default RecoverPWDPage;   

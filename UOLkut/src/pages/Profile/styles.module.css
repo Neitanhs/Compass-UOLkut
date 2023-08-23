@@ -1,0 +1,28 @@
+.Container {
+    display: flex;
+    flex-direction: wrap  ;
+    justify-content:center;
+
+}
+
+.ContainerCard {
+    margin-right: 32px;
+}
+
+.ContainerBio {
+    margin-right: 32px;
+}
+
+.ContainerFriendsANDCommunities {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.ContainerFriends {
+    margin-right: 32px;
+}
+
+.ContainerCommunities {
+    margin-right: 32px;
+}

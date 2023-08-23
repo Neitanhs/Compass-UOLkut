@@ -1,0 +1,147 @@
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 3rem;
+    height: 100vh;
+  }
+  
+  .CardImg {  
+    position: relative;
+    width: 100%;
+    height: 35rem;
+    max-width: 45rem;
+    background-image: linear-gradient(189deg, rgba(20, 20, 20, 0.00) 0%, #141414 100%), url(../../assets/Login_img/Pessoas.jpg);
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    border-radius: 16px;
+  }
+  
+  .CardImg img {
+    display: flex;
+    height: 30rem;  
+  }
+  
+  .info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .select{        
+    outline: none;
+    padding: 16px 20px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;            
+    background-color: #f0f2f5;
+    border: none ;
+  }
+
+  .CardImg:hover {  
+    transform: scale(1.05);
+    box-shadow: 0 0.3rem 0.6rem rgba(2, 2, 2, 0.7);
+  }
+  
+  .TextoNoCantoInferior {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    width: 617px;
+    color: #FFF;
+    font-size: 32px; /* Rounded to 2rem */
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    z-index: 2;
+  }
+  
+  /* Content */
+  .Content {
+    margin: 0;
+    gap: 1rem; /* Rounded to 1rem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 25rem; /* Rounded to 25rem */
+    height: 35rem; /* Rounded to 37rem */
+    padding: 3rem 1.5rem; /* Rounded to 3rem and 1.5rem */
+    border-radius: 16px; /* Rounded to 1rem */
+    background-color: #FDFEFF;
+    transition: all ease 0.5s;
+  }
+  
+    /* Label */
+    .Label {
+      color: var(--primary-color);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 20px;
+     }
+   
+    .RememberPassword {
+      display: flex;
+      justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+      align-items: center;
+      color: var(--placeholder-color);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      width: 100%; /* Ocupa toda a largura disponível */
+    }
+    
+    .RememberPassword input[type="checkbox"] {    
+      appearance: none; /* Removendo o estilo padrão do checkbox */
+      width: 14px;
+      height: 14px;    
+      border-radius: 4px;
+      margin-right: 8px;
+      border: 2px solid #ffffff;
+      cursor: pointer;
+      box-shadow: 0 0 1px 1px #ddd;
+    }
+    
+    /* Estilo da caixa de seleção quando estiver marcada */
+    .RememberPassword input[type="checkbox"]:checked {
+      background-color:var(--primary-color);
+      padding: 3px;
+      border: 2px solid #ffffff;
+    }   
+    
+    /* LabelError */
+    .LabelError {
+      font-size: 14px;
+      color: red;
+    }
+    
+  
+    .Strong a { 
+      color: var(--primary-color);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal; 
+   }
+  
+   @media (max-width: 1000px) {
+    .Container {
+      flex-direction: column;
+    }
+  
+    .CardImg {
+      display: none; /* Remover a imagem */
+      
+    }
+  
+    .Content {    
+      transform: scale(1.5);
+    }
+  
+  }

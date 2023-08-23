@@ -1,0 +1,80 @@
+.Content {
+  width: 592px;
+  height: 854px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #FDFEFF;
+  padding: 24px;
+  margin-top: 32px;
+}
+
+.Content h2 {
+  color: #4B4B4B;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.BioContent {
+  width: 544px;
+  border-radius: 10px;
+  background: #EFF3F8;
+  padding: 10px;
+  margin-top: 25.63px;
+}
+
+.BioContent p {
+  color: #4B4B4B;
+    font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Ratings {
+  display: flex;
+  color: #4B4B4B;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.RatingsGeneric {
+  margin-right: 50px;
+}
+
+.RatingsGeneric img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.Fans {
+  margin-right: 50px;
+}
+
+.Fans img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 8px;
+  margin-right: 6px;
+  float: left;
+}
+
+.FanCount {
+  margin-top: 8px;
+  float: left;
+  color: #4B4B4B;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  opacity: 0.5;
+}

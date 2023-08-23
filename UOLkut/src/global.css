@@ -1,0 +1,24 @@
+:root {  
+    --primary-color: #ED6D25;
+    --background-color: #D9E6F7;
+    --placeholder-color: #868686;  
+    --input-color:#EFF3F8;
+  }
+
+  *{  
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;        
+  }
+
+@font-face {
+    font-family: 'Roboto Flex';
+    src: url('./assets/fonts/roboto-flex.ttf') format('truetype');         
+    
+  }
+  
+  body {
+    font-family: 'Roboto Flex', sans-serif;
+    background-color: var(--background-color);
+  }
+

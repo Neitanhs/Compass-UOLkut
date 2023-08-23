@@ -1,0 +1,52 @@
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+    
+  }
+  
+  /* Content */
+  .Content {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 33.33%;
+    width: 100%;
+    background-color: #fdfeff;
+    padding: 48px 24px;
+    border-radius: 16px;
+    color: #4B4B4B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;    
+    line-height: 24px; /* 150% */
+  }
+  
+  .Titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+  }
+  
+  .Comunidades {
+    color: #4B4B4B;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  }
+  
+  
+  .Vertodos {  
+  color: #ED2590;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+  }

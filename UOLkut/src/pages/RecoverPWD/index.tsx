@@ -3,8 +3,7 @@ import Input from "../../components/Input";
 import ButtonLog from "../../components/ButtonLogin";
 import ButtonReg from "../../components/ButtonRegister";
 import LogoSVG from "../../assets/svg/logo.svg";// Importe o arquivo SVG aqui
-
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import styles from '../Login/styles.module.css'
 
 const RecoverPWDPage: React.FC = () => {

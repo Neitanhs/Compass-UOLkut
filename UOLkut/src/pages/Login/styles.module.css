@@ -54,7 +54,7 @@
     color: #FFF;
     font-size: 32px; /* Rounded to 2rem */
     font-style: normal;
-    font-weight: 200;
+    font-weight: 500;
     line-height: normal;
     z-index: 2;
   }
@@ -141,7 +141,14 @@
     }
   
     .Content {    
-      transform: scale(1.5);
+      transform: scale(1.05);
     }
   
+  }
+
+  @media (max-width: 500px){
+    .Content {    
+      transform: scale(0.9);
+    }
+
   }

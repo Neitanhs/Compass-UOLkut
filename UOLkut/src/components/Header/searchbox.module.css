@@ -1,0 +1,28 @@
+.searchBox {
+    background-color: #E0E0E0;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-left: 8rem;
+  }
+  
+  .searchLogo {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  
+  .searchInput {
+    background-color: #E0E0E0;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+  }
+  
+  @media (max-width: 1000px) {
+    .searchBox {
+      display: none;
+    }
+  }

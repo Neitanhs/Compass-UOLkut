@@ -1,6 +1,5 @@
 .Title {
-  color: #B4AEAE;
-  font-family: SF Pro Display;
+  color: #B4AEAE;  
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -15,19 +14,17 @@
   align-items: center;
   gap: 10px;
   border-radius: 30px;
-  border: 1px solid #ED2590;
-  color: #4B4B4B;
-  font-family: SF Pro Display;
+  border: 1px solid var(--primary-color);
+  color: #4B4B4B;  
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 171.429% */
+  line-height: 24px;  
   margin-left: 16px;
 }
 
 .Expand {
-  color: #ED2590;
-  font-family: SF Pro Display;
+  color: var(--primary-color);
   font-size: 14px;
   font-style: normal;
   font-weight: 500;

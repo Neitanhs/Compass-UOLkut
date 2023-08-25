@@ -4,11 +4,11 @@
     flex-shrink: 0;
     border-radius: 16px;
     background: #FDFEFF;
-    color: #ED2590;
+    color: var(--primary-color);
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px; /* 133.333% */
+    line-height: 24px;
     border: 0;
     margin-top: 32px;
 }

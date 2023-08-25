@@ -24,18 +24,15 @@ const ProfileBio: React.FC<ProfileBioProps> = ({Name, Bio}) => {
             </div>
             <ProfileInfo Title="Relacionamento" Text="Solteiro" />
             <ProfileInfo Title="Aniversário" Text="21 de julho" />
-            <ProfileInfo Title="Idade" Text="22" />
-            <ProfileInfo Title="Interesses no Orkut" Text="Solteiro" />
-            <ProfileInfo Title="Quem sou eu" Text="Programador" />
-            <ProfileInfo Title="Filhos" Text="Não" />
-            <ProfileInfo Title="Sexo" Text="Masculino" />
-            <ProfileInfo Title="Fumo" Text="Não" />
-            <ProfileInfo Title="Bebo" Text="Depedende do dia" />
+            <ProfileInfo Title="Idade" Text="22" />            
+            <ProfileInfo Title="Quem sou eu" Text="Programador" />                      
             <ProfileInfo Title="Moro" Text="Guarantã" />
             <ProfileInfo Title="País" Text="Brasil" />
             <ProfileInfo Title="Cidade natal" Text="São Paulo" />
+            <div className={styles.profileInt}>
             <ProfileInterests Title="Músicas" Content={["Trap", "Rap", "Indie"]} />
             <ProfileInterests Title="Filmes" Content={["A rede social", "Meu amigo totoro"]} />
+            </div>
         </div>
     );
 };

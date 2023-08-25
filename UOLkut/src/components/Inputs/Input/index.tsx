@@ -15,7 +15,7 @@ const Input: React.FC<InputProps> = ({ type, placeholder, value, onChange }) => 
       value={value}
       onChange={onChange}
       type={type}
-      placeholder={placeholder}
+      placeholder={placeholder}      
     />
   );
 };

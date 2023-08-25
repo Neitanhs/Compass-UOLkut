@@ -1,0 +1,46 @@
+.CardImg {  
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    max-width: 50rem;
+    background-image: linear-gradient(189deg, rgba(20, 20, 20, 0.00) 0%, #141414 100%), url(../../../assets/Login_img/Pessoas.jpg);
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    border-radius: 16px;
+  }
+  
+  .CardImg img {
+    display: flex;
+    height: 30rem;  
+  }
+
+  .CardImg:hover {  
+    transform: scale(1.05);
+    box-shadow: 0 0.3rem 0.6rem rgba(2, 2, 2, 0.7);
+  }
+  
+  .TextoNoCantoInferior {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    width: 617px;
+    color: #FFF;
+    font-size: 32px; /* Rounded to 2rem */
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    z-index: 2;
+  }
+  
+
+
+
+  @media (max-width: 1000px) {
+  .CardImg {
+    display: none; /* Remover a imagem */
+    
+  }
+
+}

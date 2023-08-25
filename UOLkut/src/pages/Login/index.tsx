@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from "react";
-import Input from "../../components/Input";
 import ButtonLog from "../../components/ButtonLogin";
 import ButtonReg from "../../components/ButtonRegister";
-import LogoSVG from "../../assets/svg/logo.svg";// Importe o arquivo SVG aqui
-
+import CardImg from '../../components/Login/CardImg/CardImg';
 import { useNavigate } from "react-router-dom";
 import styles from './styles.module.css'
+import { Logo } from '../../components/Login/Logo/Logo';
+import { FormsEP } from '../../components/Forms/FormEP/FormsEP';
 
 const LoginPage: React.FC = () => {
     const navigate = useNavigate();
@@ -41,28 +41,20 @@ const LoginPage: React.FC = () => {
     
     return (
       <div className={styles.Container}>      
-        <div className={styles.CardImg}>
-        <div className={styles.TextoNoCantoInferior}>Conecta-se aos seus amigos e familiares usando recados e mensagens instantâneas</div>
-          <img src="" alt="" />             
-        </div>
+        <CardImg/>
         <div className={styles.Content}>
-        <div className={styles.Logo}>
-          {/* Coloque o SVG aqui */}
-          <img src={LogoSVG} alt="Logo" />
-        </div>
+        <Logo/>
         <label className={styles.Label}>Acesse o Orkut</label>
-          <Input
-            type="email"
-            placeholder="E-mail"
-            value={email}
-            onChange={(e) => [setEmail(e.target.value), setError("")]}
+        <div>
+          <FormsEP
+          email={email}
+          setEmail={setEmail}
+          senha={senha}
+          setSenha={setSenha}
+          error={error}
+          setError={setError}
           />
-          <Input
-            type="password"
-            placeholder="Senha"
-            value={senha}
-            onChange={(e) => [setSenha(e.target.value), setError("")]}
-          />
+          </div>
           <div className={styles.RememberPassword}>
             <input            
               type="checkbox" 
@@ -72,8 +64,8 @@ const LoginPage: React.FC = () => {
           <label className={styles.LabelError}>{error}</label>
           <ButtonLog Text="Entrar" onClick={handleLogin} />       
           <ButtonReg Text="Criar uma conta" onClick={handleRegister} /> 
-            <label className={styles.Strong}>
-              <Link to="/Recover">Esqueci minha Senha</Link>
+            <label >
+              <Link className={styles.Link} to="/Recover">Esqueci minha Senha</Link>
             </label>        
         </div>
       </div>

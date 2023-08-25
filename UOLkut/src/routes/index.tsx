@@ -7,6 +7,7 @@ import ProfilePage from '../pages/Profile';
 import RecoverPWDPage from '../pages/RecoverPWD';
 import NewPWDPage from '../pages/NewPWD';
 import Footer from '../components/Footer/footer';
+import ProfileEdit from '../pages/EditProfile';
 
 const RoutesApp : React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const RoutesApp : React.FC = () => {
         <Route path="/NewPWD" element={<NewPWDPage/>} />
         <Route path="/Register" element={<RegisterPage/>} />
         <Route path="/Profile" element={<ProfilePage/>} />
+        <Route path="/EditProfile" element={<ProfileEdit/>} />
         <Route path="/*" element={<LoginPage />} />     
      </Routes> 
      <Footer/>

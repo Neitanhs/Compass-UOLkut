@@ -2,8 +2,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin-top: 80px;
-    height: ;
 
 }
 
@@ -23,7 +21,6 @@
 
 .ContainerFriends {
     margin-right: 32px;
-    margin-bottom: 32px;
 }
 
 .ContainerCommunities {

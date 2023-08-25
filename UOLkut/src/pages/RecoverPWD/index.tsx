@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import Input from "../../components/Input";
 import ButtonLog from "../../components/ButtonLogin";
 import ButtonReg from "../../components/ButtonRegister";
-import LogoSVG from "../../assets/svg/logo.svg";// Importe o arquivo SVG aqui
 import { useNavigate} from "react-router-dom";
 import styles from '../Login/styles.module.css'
+import CardImg from "../../components/Login/CardImg/CardImg";
+import { Logo } from "../../components/Login/Logo/Logo";
+import Input from "../../components/Inputs/Input";
 
 const RecoverPWDPage: React.FC = () => {
     const navigate = useNavigate();
@@ -35,23 +36,16 @@ const RecoverPWDPage: React.FC = () => {
     
     return (
       <div className={styles.Container}>      
-        <div className={styles.CardImg}>
-        <div className={styles.TextoNoCantoInferior}>Conecta-se aos seus amigos e familiares usando recados e mensagens instantâneas</div>
-          <img src="" alt="" />             
-        </div>
+       <CardImg/>
         <div className={styles.Content}>  
-        <div className={styles.Logo}>
-          {/* Coloque o SVG aqui */}
-          <img src={LogoSVG} alt="Logo" />
-        </div>
+        <Logo/>
         <label className={styles.Label}>Recupere sua Senha</label>
-          <Input
+        <Input
             type="email"
             placeholder="E-mail"
             value={email}
             onChange={(e) => [setEmail(e.target.value), setError("")]}
-          />
-                      
+          />           
            <label className={styles.LabelError}>{error}</label>
           <ButtonLog Text="Enviar o Código" onClick={handleLogin} />       
             <label className={styles.Strong}>

@@ -1,11 +1,7 @@
 .Container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: flex;   
     gap: 10px;
-    height: 100vh;
-    
+    height: 100vh;    
   }
   
   /* Content */
@@ -13,19 +9,19 @@
     gap: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     flex-basis: 33.33%;
     width: 100%;
     background-color: #fdfeff;
-    padding: 48px 24px;
+    padding: 24px 24px;
     border-radius: 16px;
     color: #4B4B4B;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;    
-    line-height: 24px; /* 150% */
+    line-height: 24px; 
   }
   
   .Titulo {
@@ -40,13 +36,15 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px; /* 150% */
+  margin:24px 0 0 24px;
   }
   
   
   .Vertodos {  
-  color: #ED2590;
+  color: var(--primary-color);
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 171.429% */
+  line-height: 24px;
+  margin:24px 24px 0 0;
   }

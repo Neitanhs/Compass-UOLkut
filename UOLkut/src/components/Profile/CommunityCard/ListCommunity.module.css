@@ -5,22 +5,19 @@
     justify-content: center;
     flex-direction: row;
     gap: 10px;
-    height: 100vh;
+    height: 100vh;   
     
   }
   
   /* Content */
   .Content {
+    width: 280px;
+    height: 411px;
     gap: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    width: 100%;
-    background-color: #fdfeff;
-    max-width: 350px;
-    padding: 48px 24px;
+    display: flex; 
+    flex-flow: row wrap;    
+    background-color: #fdfeff;      
     border-radius: 16px;
-    margin-top: 32px;
+    
     
   }

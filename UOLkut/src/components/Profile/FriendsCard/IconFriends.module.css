@@ -18,10 +18,9 @@
     flex-basis: 33.33%;
     width: 100%;
     background-color: #fdfeff;
-    padding: 48px 24px;
+    padding: 24px 24px;
     border-radius: 16px;
     color: #4B4B4B;
-    font-family: SF Pro Display;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -34,21 +33,22 @@
     justify-content: space-between;  
   }
   
-  .Comunidades {
+  .Amigos {
     color: #4B4B4B;
-  font-family: SF Pro Display;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
-  }
+  line-height: 24px;
+  margin: 24px 0 0 24px;
+  
+    }
   
   
   .Vertodos {  
-  color: #ED2590;
-  font-family: SF Pro Display;
+  color: var(--primary-color);
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 171.429% */
+  line-height: 24px;
+  margin: 24px 24px 0 0;
   }

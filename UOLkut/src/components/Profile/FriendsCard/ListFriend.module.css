@@ -6,6 +6,7 @@
     flex-direction: row;
     gap: 10px;
     height: 100vh;
+    margin-bottom: 32px;
   }
   
   /* Content */
@@ -15,10 +16,10 @@
     align-items: center;
     justify-content: space-around;
     flex-flow: row wrap;
-    width: 100%;
-    background-color: #fdfeff;
-    max-width: 350px;
-    padding: 48px 24px;
+    width: 280px;
+    height: 411px;
+    background-color: #fdfeff;    
     border-radius: 16px;
-    margin-top: 32px;
+     margin-top: 32px;
+   
   }

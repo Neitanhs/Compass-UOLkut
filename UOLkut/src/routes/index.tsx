@@ -8,6 +8,7 @@ import RecoverPWDPage from '../pages/RecoverPWD';
 import NewPWDPage from '../pages/NewPWD';
 import Footer from '../components/Footer/footer';
 import ProfileEdit from '../pages/EditProfile';
+import ProtectedRoutes from '../components/ProtectRoutes/ProtectRoutes';
 
 const RoutesApp : React.FC = () => {
   return (
@@ -19,8 +20,10 @@ const RoutesApp : React.FC = () => {
         <Route path="/Recover" element={<RecoverPWDPage/>} />
         <Route path="/NewPWD" element={<NewPWDPage/>} />
         <Route path="/Register" element={<RegisterPage/>} />
+        <Route element={<ProtectedRoutes />}>
         <Route path="/Profile" element={<ProfilePage/>} />
         <Route path="/EditProfile" element={<ProfileEdit/>} />
+        </Route>
         <Route path="/*" element={<LoginPage />} />     
      </Routes> 
      <Footer/>

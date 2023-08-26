@@ -1,7 +1,9 @@
-import React from 'react';
-import Input from '../../Inputs/Input';
-import styles from "./styles.module.css"
-
+import React from "react";
+import styles from "./styles.module.css";
+import { InputNascimento } from "../../Inputs/InputNascimento/InputNascimento";
+import { InputProfissao } from "../../Inputs/InputProfissao/InputProfissao";
+import { InputPais } from "../../Inputs/InputPais/InputPais";
+import { InputCidade } from "../../Inputs/InputCidade/InputCidade";
 
 interface FormsRGProps {
   name: string;
@@ -18,46 +20,44 @@ interface FormsRGProps {
   setError: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const FormsReg: React.FC<FormsRGProps> = ({ nascimento, setNascimento, profissao, setProfissao, pais, setPais, cidade, setCidade, setError }) => {
-    return (
-        
-    <form className={styles.formReg}>        
-      <Input
-        type="text"
-        placeholder="Nascimento"
-        value={nascimento}
-        onChange={(e) => {
-          setNascimento(e.target.value);
-          setError(''); 
-        }}
+export const FormsReg: React.FC<FormsRGProps> = ({
+  nascimento,
+  setNascimento,
+  profissao,
+  setProfissao,
+  pais,
+  setPais,
+  cidade,
+  setCidade,
+  setError,
+  error,
+}) => {
+  return (
+    <form className={styles.formReg}>
+      <InputNascimento
+        nascimento={nascimento}
+        setNascimento={setNascimento}
+        setError={setError}
+        error={error}
       />
-      <Input
-        type="text"
-        placeholder="Profissão"
-        value={profissao}
-        onChange={(e) => {
-          setProfissao(e.target.value);
-          setError(''); 
-        }}
+      <InputProfissao
+        profissao={profissao}
+        setProfissao={setProfissao}
+        setError={setError}
+        error={error}
       />
-      <Input
-        type="text"
-        placeholder="País"
-        value={pais}
-        onChange={(e) => {
-          setPais(e.target.value);
-          setError(''); 
-        }}
+      <InputPais
+        pais={pais}
+        setPais={setPais}
+        setError={setError}
+        error={error}
       />
-      <Input
-        type="text"
-        placeholder="Cidade"
-        value={cidade}
-        onChange={(e) => {
-          setCidade(e.target.value);
-          setError(''); 
-        }}
-      />     
-    </form>    
+      <InputCidade
+        cidade={cidade}
+        setCidade={setCidade}
+        setError={setError}
+        error={error}
+      />
+    </form>
   );
 };

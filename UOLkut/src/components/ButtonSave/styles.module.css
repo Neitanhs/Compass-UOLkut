@@ -1,0 +1,27 @@
+ .buttonContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 500px 
+ }
+ 
+ .button {
+    padding: 16px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 350px;
+    transition: all ease 0.5s;
+    
+  }
+  
+  .button:hover{
+    box-shadow: 0px 4px 10px var(--primary-color) ;
+  }

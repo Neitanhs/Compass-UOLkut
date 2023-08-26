@@ -1,34 +1,77 @@
-import React from "react";
-import ProfileCard from "../../components/Profile/ProfileCard"
-import ButtonEditProfile from "../../components/Profile/ButtonEditProfile";
-import ProfileBio from "../../components/Profile/ProfileBio";
+import React, { useState } from "react";
+import ProfileCard from "../../components/Profile/ProfileCard";
 import style from "./styles.module.css";
+import { useNavigate } from "react-router-dom";
+import { FormsEdit } from "../../components/Forms/FormEdit/FormEdit";
+import ButtonSave from "../../components/ButtonSave";
+import { InputRelationship } from "../../components/Inputs/InputR/InputRelationship";
 
 interface ProfilePageProps {}
 
-const ProfileEdit: React.FC<ProfilePageProps> = () => {
-  const HandleEdit = () => {
-    console.log("Soon");
+const ProfilePage: React.FC<ProfilePageProps> = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
+    const [confirmSenha, setConfirmSenha] = useState("");
+    const [name, setName] = useState("");
+    const [profissao, setProfissao] = useState("");
+    const [pais, setPais] = useState("");
+    const [cidade, setCidade] = useState("");
+    const [nascimento, setNascimento] = useState("");
+    const [relationship, setRelationship] = useState("");
+    const [error, setError] = useState("");
+  const handleEdit = () => {
+    navigate("/EditProfile");
   };
 
   return (
     <div className={style.Container}>
       <div className={style.ContainerCard}>
         <ProfileCard
-          Name="Iuri Silva"
+          Name="Gabriel Barbosa"
           RelationshipStatus="Solteiro"
           Country="Brasil"
         />
-        <ButtonEditProfile Text="Editar meu perfil" onClick={HandleEdit} />
       </div>
-      <div className={style.ContainerCard}>
-        <ProfileBio
-          Name="Iuri Silva"
-          Bio="Programar sem café é igual poeta sem poesia"
-        />
-      </div>     
-        </div>   
+      <div className={style.formsContainer}>
+        <div className={style.titleContainer}>
+          <span>Editar Informações</span>
+        </div>
+        <div>
+          <FormsEdit 
+          email={email}
+          setEmail={setEmail}          
+          confirmSenha={confirmSenha}
+          setConfirmSenha={setConfirmSenha}
+          senha={senha}
+          setSenha={setSenha}
+          name={name}
+          setName={setName}
+          profissao={profissao}
+          setProfissao={setProfissao}
+          pais={pais}
+          setPais={setPais}
+          cidade={cidade}
+          setCidade={setCidade}
+          nascimento={nascimento}
+          setNascimento={setNascimento}
+          error={error}
+          setError={setError}/>
+
+        <div className={style.relationship}>
+
+          <InputRelationship
+          relationship={relationship}
+          setRelationship={setRelationship}
+          error={error}
+          setError={setError}/>
+          
+        </div>
+        </div>
+        <ButtonSave Text="Criar uma conta" onClick={handleEdit} />
+      </div>
+    </div>
   );
 };
 
-export default ProfileEdit;
+export default ProfilePage;

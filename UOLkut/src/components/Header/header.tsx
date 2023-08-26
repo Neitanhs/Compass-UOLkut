@@ -7,10 +7,11 @@ const Header: React.FC = () => {
   const location = useLocation();
 
   const isProfilePath = location.pathname === '/profile';
+  const isEditProfilePath = location.pathname === '/EditProfile';
 
   return (
     <header>
-      {isProfilePath ? <HeaderProfile /> : <HeaderLogin />}
+      {isProfilePath || isEditProfilePath ? <HeaderProfile /> : <HeaderLogin />}
     </header>
   );
 };

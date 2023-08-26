@@ -20,13 +20,12 @@ const RoutesApp : React.FC = () => {
         <Route path="/Recover" element={<RecoverPWDPage/>} />
         <Route path="/NewPWD" element={<NewPWDPage/>} />
         <Route path="/Register" element={<RegisterPage/>} />
-        <Route element={<ProtectedRoutes />}>
+       
         <Route path="/Profile" element={<ProfilePage/>} />
         <Route path="/EditProfile" element={<ProfileEdit/>} />
-        </Route>
+        
         <Route path="/*" element={<LoginPage />} />     
-     </Routes> 
-     <Footer/>
+     </Routes>      
      </Fragment>
     </Router>
   );

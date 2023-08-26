@@ -8,9 +8,11 @@ import CardImg from "../../components/Login/CardImg/CardImg";
 import { Logo } from "../../components/Login/Logo/Logo";
 import { InputName } from "../../components/Inputs/InputName/InputName";
 import { InputRelationship } from "../../components/Inputs/InputR/InputRelationship";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../services/firebase";
 
 const RegisterPage: React.FC = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [name, setName] = useState("");
@@ -21,12 +23,14 @@ const RegisterPage: React.FC = () => {
   const [relationship, setRelationship] = useState("");
   const [error, setError] = useState<string>("");
 
+
   const isValidEmail = (email: string): boolean => {
     const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     return emailRegex.test(email);
   };
 
-  const handleLogin = () => {
+  const handleLogin = (e: React.MouseEvent<HTMLButtonElement>) => {   
+    
     if (
       !email ||
       !senha ||
@@ -43,56 +47,61 @@ const RegisterPage: React.FC = () => {
       setError("E-mail inválido");
       return;
     }
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth,email,senha).then(data=>{
+        console.log(data,"authdata")
+        navigate("/login")
 
-    navigate("/login");
+    }) 
   };
 
   return (
     <div className={styles.Container}>
-      <CardImg/>
+      <CardImg />
       <div className={styles.Content}>
-      <Logo/>
+        <Logo />
         <label className={styles.Label}>Cadastre-se o UOLkut</label>
         <FormsEP
-        email={email}
-        setEmail={setEmail}
-        senha={senha}
-        setSenha={setSenha}
-        error={error}
-        setError={setError}
-        />       
+          email={email}
+          setEmail={setEmail}
+          senha={senha}
+          setSenha={setSenha}
+          error={error}
+          setError={setError}
+        />
         <InputName
-        name={name}
-        setName={setName}
-        error={error}
-        setError={setError}
+          name={name}
+          setName={setName}
+          error={error}
+          setError={setError}
         />
         <div className={styles.info}>
           <FormsReg
-          name={name}
-          setName={setName}
-          nascimento={nascimento}
-          setNascimento={setNascimento}
-          profissao={profissao}
-          setProfissao={setProfissao}
-          pais={pais}
-          setPais={setPais}
-          cidade={cidade}
-          setCidade={setCidade}
-          error={error}
-          setError={setError}/>
+            name={name}
+            setName={setName}
+            nascimento={nascimento}
+            setNascimento={setNascimento}
+            profissao={profissao}
+            setProfissao={setProfissao}
+            pais={pais}
+            setPais={setPais}
+            cidade={cidade}
+            setCidade={setCidade}
+            error={error}
+            setError={setError}
+          />
         </div>
         <div className={styles.inputRealContainer}>
-        <InputRelationship
-        relationship={relationship}
-        setRelationship={setRelationship}
-        error={error}
-        setError={setError}
-        />
-        </div>        
+          <InputRelationship
+            relationship={relationship}
+            setRelationship={setRelationship}
+            error={error}
+            setError={setError}
+          />
+        </div>
 
         <label className={styles.LabelError}>{error}</label>
-        <ButtonLog Text="Criar Conta" onClick={handleLogin} />
+        <ButtonLog Text="Criar Conta" onClick={(e) => handleLogin(e)} />
       </div>
     </div>
   );

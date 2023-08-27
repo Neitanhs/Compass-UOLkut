@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "email": "eunseimais@gmail.com",
+      "senha": "tantan123",
+      "name": "Pelé",
+      "profissao": "JogadorCARO",
+      "pais": "BR",
+      "cidade": "Ibura",
+      "nascimento": "12/12/2012",
+      "relationship": "divorciado",
+      "id": 1
+    },
+    {
+      "email": "EunaoacreditoqueFuncionou@gmail.com",
+      "senha": "euteamoDeus",
+      "name": "Zé Gotinha",
+      "profissao": "Vagabundo",
+      "pais": "BR",
+      "cidade": "Ibura",
+      "nascimento": "12/12/2001",
+      "relationship": "solteiro",
+      "id": 2
+    },
+    {
+      "email": "Agora@gmail.com",
+      "senha": "doido123",
+      "name": "Doidão",
+      "profissao": "Carpinto",
+      "pais": "BR",
+      "cidade": "Paulistinha",
+      "nascimento": "12/12/2020",
+      "relationship": "solteiro",
+      "uid": "eIGYoJ0HzNTpLecKYgqO6eUZOay1",
+      "id": 3
+    },
+    {
+      "email": "jesus@gmail.com",
+      "senha": "tantan123",
+      "name": "Jesus",
+      "profissao": "Sábio",
+      "pais": "Israel",
+      "cidade": "Jerusalem",
+      "nascimento": "24/12/0000",
+      "relationship": "solteiro",
+      "uid": "ISrVTecDklek4uAetxXsEgpi43m2",
+      "id": 4
+    },
+    {
+      "email": "FinalmenteObrigado@gmail.com",
+      "senha": "kyWork.00",
+      "name": "Jefferson Caminhões",
+      "profissao": "Stripper",
+      "pais": "Brasil",
+      "cidade": "Paulista",
+      "nascimento": "12/12/2001",
+      "relationship": "namorando",
+      "uid": "mxLA63TaYIYzS5moIVOiasiIfvv1",
+      "id": 5
+    }
+  ]
+}

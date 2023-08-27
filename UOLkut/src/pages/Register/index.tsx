@@ -10,6 +10,8 @@ import { InputName } from "../../components/Inputs/InputName/InputName";
 import { InputRelationship } from "../../components/Inputs/InputR/InputRelationship";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../services/firebase";
+import { registerUser } from "../../services/apiService"; // Importando a função de registro da apiService
+
 
 const RegisterPage: React.FC = () => {
   const navigate = useNavigate()
@@ -29,8 +31,7 @@ const RegisterPage: React.FC = () => {
     return emailRegex.test(email);
   };
 
-  const handleLogin = (e: React.MouseEvent<HTMLButtonElement>) => {   
-    
+  const handleLogin = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (
       !email ||
       !senha ||
@@ -47,12 +48,36 @@ const RegisterPage: React.FC = () => {
       setError("E-mail inválido");
       return;
     }
-    e.preventDefault();
-    createUserWithEmailAndPassword(auth,email,senha).then(data=>{
-        console.log(data,"authdata")
-        navigate("/login")
 
-    }) 
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, senha)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        const uid = user.uid;
+
+        const userData = {
+          email,
+          senha,
+          name,
+          profissao,
+          pais,
+          cidade,
+          nascimento,
+          relationship,
+          uid, // Armazena o UID junto com outras informações
+        };
+
+        registerUser(userData) // Envia os dados do usuário para a API
+          .then(() => {
+            navigate("/login");
+          })
+          .catch((error) => {
+            setError("Erro ao salvar perfil: " + error.message);
+          });
+      })
+      .catch((error) => {
+        setError("Erro ao registrar: " + error.message);
+      });
   };
 
   return (

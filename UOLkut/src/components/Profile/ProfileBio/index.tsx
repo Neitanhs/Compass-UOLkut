@@ -4,15 +4,24 @@ import ProfileRatings from './ProfileRatings';
 import ProfileInfo from './ProfileInfo';
 import ProfileInterests from './ProfileInterests';
 
-interface ProfileBioProps {
-    Name: string;
+interface ProfileBioProps {    
     Bio: string;
+    name: string,    
+    profissao:string, 
+    pais:string,
+    cidade:string,
+    nascimento:string,
+    relationship:string,
+    
 }
 
-const ProfileBio: React.FC<ProfileBioProps> = ({Name, Bio}) => {
+const ProfileBio: React.FC<ProfileBioProps> = ({Bio, name, profissao, pais, cidade, nascimento, relationship}) => {
+    
+   
+
     return (
         <div className={styles.Content}>
-            <h2>Boa tarde, {Name}</h2>
+            <h2>Boa tarde, {name}</h2>
             <div className={styles.BioContent}>
                 <p>{Bio}</p>
             </div>
@@ -22,13 +31,13 @@ const ProfileBio: React.FC<ProfileBioProps> = ({Name, Bio}) => {
                 <ProfileRatings Title='Legal' Type='Cool' />
                 <ProfileRatings Title='Sexy' Type='Sexy' />
             </div>
-            <ProfileInfo Title="Relacionamento" Text="Solteiro" />
-            <ProfileInfo Title="Aniversário" Text="21 de julho" />
-            <ProfileInfo Title="Idade" Text="22" />            
-            <ProfileInfo Title="Quem sou eu" Text="Programador" />                      
-            <ProfileInfo Title="Moro" Text="Guarantã" />
-            <ProfileInfo Title="País" Text="Brasil" />
-            <ProfileInfo Title="Cidade natal" Text="São Paulo" />
+            <ProfileInfo Title="Relacionamento" value={relationship} />
+            <ProfileInfo Title="Aniversário" value={nascimento} />
+            <ProfileInfo Title="Idade" value="999+" />            
+            <ProfileInfo Title="Quem sou eu" value={profissao} />                      
+            <ProfileInfo Title="Moro" value="Paulista" />
+            <ProfileInfo Title="País" value={pais} />
+            <ProfileInfo Title="Cidade natal" value={cidade} />
             <div className={styles.profileInt}>
             <ProfileInterests Title="Músicas" Content={["Trap", "Rap", "Indie"]} />
             <ProfileInterests Title="Filmes" Content={["A rede social", "Meu amigo totoro"]} />

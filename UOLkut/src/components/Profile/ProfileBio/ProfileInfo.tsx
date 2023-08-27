@@ -3,12 +3,13 @@ import styles from './stylesInfo.module.css';
 
 interface InfoProps {
     Title: string;
-    Text: string;
+    value: string;
 }
 
-const ProfileInfo: React.FC<InfoProps> = ({Title, Text}) => {
+const ProfileInfo: React.FC<InfoProps> = ({Title, value}) => {
+  
     return (
-        <p className={styles.Title}>{Title}: <span className={styles.Text}>{Text}</span></p>
+        <p className={styles.Title}>{Title}: <span className={styles.Text}>{value}</span></p>
     );
 };
 

@@ -11,6 +11,21 @@
     
 }
 
+.ProfileImageContainer {
+    position: relative;
+  }
+
+  .Icon {
+    position: absolute;
+    border: #FDFEFF;
+    top:1 ;
+    bottom: 2;
+    left: 20;
+    z-index: 2;
+    width: 50px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 50px; /* Ajuste o tamanho do ícone conforme necessário */
+  }
+
 .PFP {
     position: relative;
 }
@@ -21,6 +36,7 @@
     flex-shrink: 0;
     stroke-width: 3px;
     stroke: var(--primary-color);
+    z-index: 1;
 }
 
 .PFPImg {
@@ -30,6 +46,8 @@
     height: 170px;
     flex-shrink: 0;
     border-radius: 100px;
+    z-index: 1;
+
 
 }
 

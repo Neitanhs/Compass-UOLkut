@@ -12,7 +12,7 @@ interface UserData {
   cidade: string;
   nascimento: string;
   relationship: string;
-  uid:string  
+  uid?: string;
 }
 
 export const registerUser = (userData: UserData) => {
@@ -29,6 +29,10 @@ export const getUserProfile = (uid: string) => {
   
 })};  
 
-export const updateUserProfile = (userId: string, updatedProfile: UserData) => {
-  return axios.put<UserData>(`${API_URL}/users/${userId}`, updatedProfile);
-};
+export const updateUserProfile = (uid: string, updatedProfile: UserData) => {
+  return axios.put<UserData>(`${API_URL}/users/${uid}`, updatedProfile, {
+    headers: {
+      'Cache-Control': 'no-cache',
+      'Pragma': 'no-cache',    
+    }
+  })};

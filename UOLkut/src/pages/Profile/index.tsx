@@ -40,7 +40,6 @@ const ProfilePage: React.FC<ProfilePageProps> = () => {
       getUserProfile(uid)
         .then((response) => {
           setUserProfile(response.data[0]);
-
           console.log("User Profile:", userProfile); // Adicione esta linha
         })
         .catch((error) => {
@@ -57,15 +56,16 @@ const ProfilePage: React.FC<ProfilePageProps> = () => {
     <div className={style.Container}>
       <div className={style.ContainerCard}>
         <ProfileCard
-          Name="Gabriel Barbosa"
-          RelationshipStatus="Solteiro"
-          Country="Brasil"
+          Name={userProfile.name}
+          RelationshipStatus={userProfile.relationship}
+          Country={userProfile.pais}
+          isEditing={false}
         />
         <ButtonEditProfile Text="Editar meu perfil" onClick={HandleEdit} />
       </div>
       <div className={style.ContainerCard}>
         <ProfileBio
-          Bio="Deus, me Ajuda"
+          Bio="Programar sem café é igual poeta sem poesia."
           name={userProfile.name}
           relationship={userProfile.relationship}
           nascimento={userProfile.nascimento}

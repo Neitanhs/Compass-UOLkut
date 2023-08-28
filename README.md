@@ -16,7 +16,7 @@ This challenge consists of building a user registration, login, and profile mana
 - Display user profile information dynamically
 - Edit user profile information and update backend
 
-##💡Technologies Used
+## 💡Technologies used 
 
 - React: A JavaScript library for building user interfaces
 - TypeScript: A typed superset of JavaScript that compiles to plain JavaScript

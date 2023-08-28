@@ -5,10 +5,11 @@ import { useLocation } from "react-router-dom";
 const Footer: React.FC = () => {
   const location = useLocation();
 
-  const isProfilePath = location.pathname === "/profile";
+  const isProfilePath = location.pathname === "/Profile";
+  const isEditProfilePath = location.pathname === "/EditProfile";
 
   return (
-    <footer className={`${styles.footer} ${isProfilePath ? styles.hidden : ""}`}>
+    <footer className={`${styles.footer} ${isProfilePath || isEditProfilePath ? styles.hidden : ""}`}>
       <p>Todos os direitos reservados &copy; {new Date().getFullYear()}</p>
     </footer>
   );

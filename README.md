@@ -1,6 +1,6 @@
 # 🌟COMPASS UOLKUT CHALLENGE-03 🌟
 
-Welcome to My Awesome Project! This project is built using React, TypeScript, Firebase Authentication, Axios, and JSON Server. It aims to provide a user registration, login, and profile management system.
+This challenge consists of building a user registration, login, and profile management system using React, TypeScript, Firebase Authentication, Axios, and JSON Server. Users can register, log in, view their profile details, and edit their profile information.
 
 ## 📝 Table of Contents 
 

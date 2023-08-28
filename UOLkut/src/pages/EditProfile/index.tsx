@@ -32,14 +32,15 @@ const EditProfilePage: React.FC<EditProfileProps> = () => {
     cidade: "",
     nascimento: "",
     relationship: "",
-    uid: "",
+    email:"",
+    uid:""
   });
 
   useEffect(() => {
     if (currentUser) {
-      const uid = currentUser.uid;
+      const email = currentUser.email;
 
-      getUserProfile(uid)
+      getUserProfile(email)
         .then((response) => {
           setUserProfile(response.data[0]);
         })
@@ -65,9 +66,10 @@ const EditProfilePage: React.FC<EditProfileProps> = () => {
       cidade,
       nascimento,
       relationship,
+      uid,
     };
   
-    updateUserProfile(currentUser.uid, updatedProfile)
+    updateUserProfile(currentUser.uid, updatedProfile) // Use currentUser.uid as the ID
       .then(() => {
         // Atualização bem-sucedida
         alert("Perfil atualizado com sucesso!");

@@ -51,8 +51,7 @@ const RecoverPWDPage: React.FC = () => {
             <label className={styles.Strong}>
               <span>Lembrou sua senha?</span>
             </label> 
-          <ButtonReg Text="Entrar com as credenciais" onClick={handleBackLogin} /> 
-          
+          <ButtonReg Text="Entrar com as credenciais" onClick={handleBackLogin} />          
         </div>
       </div>
     );

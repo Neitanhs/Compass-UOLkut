@@ -93,6 +93,18 @@
       "relationship": "Namorando",
       "uid": "0mtXKHLigteu24TY4OqLfyRJanx1",
       "id": 8
+    },
+    {
+      "email": "Davi@gmail.com",
+      "senha": "davi12345",
+      "name": "Davi Enrique",
+      "profissao": "Programador",
+      "pais": "BR",
+      "cidade": "Paulista",
+      "nascimento": "19/12/2001",
+      "relationship": "Divorciado",
+      "uid": "J7YvfKiIUgMGSnVocYUuWm1gAL42",
+      "id": 9
     }
   ]
 }

@@ -23,7 +23,7 @@
 }
 
 .headerText {
-    color: #ED6D25;
+    color: var(--primary-color);
     font-size: 36px;   
     font-weight: 800;
     line-height: normal;
@@ -43,7 +43,7 @@
 }
 
 .links a:hover {
-    color: #ed2590;
+    color: var(--primary-color);
 }
 
 .links a:last-child {

@@ -15,8 +15,13 @@ interface ProfileBioProps {
     
 }
 
+const calculateAge = (birthYear: number) => {
+    const currentYear = new Date().getFullYear();
+    return currentYear - birthYear;
+};
+
 const ProfileBio: React.FC<ProfileBioProps> = ({Bio, name, profissao, pais, cidade, nascimento, relationship}) => {
-    
+    const birthYear = parseInt(nascimento.split("/")[2]);
    
 
     return (
@@ -33,9 +38,9 @@ const ProfileBio: React.FC<ProfileBioProps> = ({Bio, name, profissao, pais, cida
             </div>
             <ProfileInfo Title="Relacionamento" value={relationship} />
             <ProfileInfo Title="Aniversário" value={nascimento} />
-            <ProfileInfo Title="Idade" value="999+" />            
+            <ProfileInfo Title="Idade" value={`${calculateAge(birthYear)} anos`} />            
             <ProfileInfo Title="Quem sou eu" value={profissao} />                      
-            <ProfileInfo Title="Moro" value="Paulista" />
+            <ProfileInfo Title="Moro" value={cidade} />
             <ProfileInfo Title="País" value={pais} />
             <ProfileInfo Title="Cidade natal" value={cidade} />
             <div className={styles.profileInt}>

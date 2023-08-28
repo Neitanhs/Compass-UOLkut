@@ -57,6 +57,42 @@
       "relationship": "namorando",
       "uid": "mxLA63TaYIYzS5moIVOiasiIfvv1",
       "id": 5
+    },
+    {
+      "email": "laysuzumaki@gmail.com",
+      "senha": "lala123",
+      "name": "Lays Mayara",
+      "profissao": "Designer",
+      "pais": "Brasil",
+      "cidade": "Paulista",
+      "nascimento": "03/12/2003",
+      "relationship": "casado",
+      "uid": "2suEUEibscZFt2m0I0njEWD0aFn1",
+      "id": 6
+    },
+    {
+      "email": "soteste@gmail.com",
+      "senha": "tantan123",
+      "name": "Dio Brando",
+      "profissao": "Segredo",
+      "pais": "Inglaterra",
+      "cidade": "Ibura",
+      "nascimento": "19/12/2201",
+      "relationship": "Preocupado",
+      "uid": "xUAm8yoz8hbIawEhNwNTNBD6Euv1",
+      "id": 7
+    },
+    {
+      "email": "jojo@gmail.com",
+      "senha": "dio12345",
+      "name": "Jonathan Joestar",
+      "profissao": "Arqueólogo",
+      "pais": "Inglaterra",
+      "cidade": "Brighton",
+      "nascimento": "04/04/2000",
+      "relationship": "Namorando",
+      "uid": "0mtXKHLigteu24TY4OqLfyRJanx1",
+      "id": 8
     }
   ]
 }

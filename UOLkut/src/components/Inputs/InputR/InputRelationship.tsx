@@ -15,11 +15,11 @@ export const InputRelationship: React.FC<InputRelationshipProps> = ({relationshi
           onChange={(e) => [setRelationship(e.target.value), setError("")]}
         >
           <option value="">Relacionamento</option>
-          <option value="solteiro">Solteiro</option>
-          <option value="casado">Casado</option>
-          <option value="divorciado">Divorciado</option>
-          <option value="namorando">Namorando</option>
-          <option value="preocupado">Preocupado</option>
+          <option value="Solteiro">Solteiro(a)</option>
+          <option value="Casado">Casado(a)</option>
+          <option value="Divorciado">Divorciado(a)</option>
+          <option value="Namorando">Namorando(a)</option>
+          <option value="Preocupado">Preocupado(a)</option>
         </select>
       
   )

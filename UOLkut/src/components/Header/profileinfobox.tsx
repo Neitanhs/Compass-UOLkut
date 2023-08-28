@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './profileinfobox.module.css';
 import profileImage from '../../assets/headerAssets/profileinfoimg.png';
-import arrow from '../../assets/headerAssets/arrow.png'
+import arrow from '../../assets/headerAssets/arrow.svg'
 
 interface ProfileInfoBoxProps {
-  text: string; // Texto a ser exibido na caixa
+  text: string;
 }
 
 const ProfileInfoBox: React.FC<ProfileInfoBoxProps> = ({ text }) => {
